@@ -1,0 +1,114 @@
+/* Achtergrond en basis */
+body {
+  margin: 0;
+  background-image: url('stadion.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* Headers en paragrafen = ETHNOCENTRIC */
+h1, p {
+  font-family: "ethnocentric", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+#scoreText {
+  font-size: 2em;
+  color: #00ffcc;
+  text-shadow: 1px 1px 3px black;
+  margin-top: 20px;
+}
+
+/* Buttons = SPORTY-PRO */
+button {
+  font-family: "sporty-pro", sans-serif;
+  background-color: #000000;
+  color: white;
+  border: 2px solid #ffffff50;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.buttons button {
+  margin: 10px 20px;
+}
+
+button:hover {
+  background-color: #03eff3;
+  box-shadow: 0 0 20px #03eff3, 0 0 40px #03eff3;
+  transform: scale(1.05);
+}
+
+/* Algemene layout */
+.hidden {
+  display: none;
+}
+
+img {
+  max-width: 250px;
+  margin: 20px auto;
+  display: block;
+}
+
+#feedback {
+  font-size: 3em;
+  margin: 15px 0;
+  color: #ffffff;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* SIUUUU Animation */
+#siuuu-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 5rem;
+  color: #000000;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #3bceff,
+    0 0 30px #3bb7ff,
+    0 0 40px #075aff,
+    0 0 70px #2807ff;
+  user-select: none;
+  pointer-events: none;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+  font-family: "sporty-pro", sans-serif;
+}
+
+@keyframes siuuu-pop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
